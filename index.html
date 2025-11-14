@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Científica</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<!-- Jeziel Nogueira / Gustavo Modulo / Davi Guilherme -->
+<body>
+    <div class="container">
+        <div id="calculadora">
+            <h1>Calculadora Científica</h1>
+            <input id="display" type="text" readonly placeholder="0">
+            <div id="teclas">
+                <!-- Primeira linha: Funções científicas -->
+                <button onclick="aplicarFuncao('sin')" class="funcao-btn">sin</button>
+                <button onclick="aplicarFuncao('cos')" class="funcao-btn">cos</button>
+                <button onclick="aplicarFuncao('tan')" class="funcao-btn">tan</button>
+                <button onclick="limpaTela()" class="limpar-btn">C</button>
+
+                <!-- Segunda linha: Potências e raiz -->
+                <button onclick="aplicarFuncao('sqrt')" class="funcao-btn">√</button>
+                <button onclick="aplicarFuncao('quadrado')" class="funcao-btn">x²</button>
+                <button onclick="aplicarFuncao('cubo')" class="funcao-btn">x³</button>
+                <button onclick="deletarUltimo()" class="operador-btn">←</button>
+
+                <!-- Terceira linha: Números e operadores básicos -->
+                <button onclick="operar('7')">7</button>
+                <button onclick="operar('8')">8</button>
+                <button onclick="operar('9')">9</button>
+                <button onclick="operar('/')" class="operador-btn">/</button>
+
+                <!-- Quarta linha -->
+                <button onclick="operar('4')">4</button>
+                <button onclick="operar('5')">5</button>
+                <button onclick="operar('6')">6</button>
+                <button onclick="operar('*')" class="operador-btn">×</button>
+
+                <!-- Quinta linha -->
+                <button onclick="operar('1')">1</button>
+                <button onclick="operar('2')">2</button>
+                <button onclick="operar('3')">3</button>
+                <button onclick="operar('-')" class="operador-btn">−</button>
+
+                <!-- Sexta linha -->
+                <button onclick="operar('0')" class="zero-btn">0</button>
+                <button onclick="operar('.')">.</button>
+                <button onclick="calcular()" class="igual-btn">=</button>
+                <button onclick="operar('+')" class="operador-btn">+</button>
+                
+            </div>
+        </div>
+    </div>
+    <script src="javascript.js"></script>
+</body>
+</html>
